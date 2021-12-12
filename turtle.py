@@ -1,11 +1,9 @@
 import turtle
-
-star = turtle.Turtle()
-star.shape('turtle')
-
-for i in range(50):
-    star.forward(i)
-    star.forward(100)
-    star.right(144)
-
-turtle.done()
+colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
+t = turtle.Pen()
+turtle.bgcolor('black')
+for x in range(360):
+	t.pencolor(colors[x%6])
+	t.width(x//100 + 1)
+	t.forward(x)
+	t.left(59)
